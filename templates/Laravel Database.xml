@@ -1,0 +1,9 @@
+<templateSet group="Laravel Database">
+    <template name="ll::ToSql" value="$sql = vsprintf(&#10;            str_replace('?', '%s', $$$query$-&gt;toSql()),&#10;            collect($$$query$-&gt;getBindings())-&gt;map(&#10;                function ($binding) {&#10;                    return is_numeric($binding) ? $binding : &quot;'{$binding}'&quot;;&#10;                }&#10;            )-&gt;toArray()&#10;        );" toReformat="false" toShortenFQNames="true">
+        <variable name="query" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="PHP" value="true" />
+            <option name="PHP Comment" value="false" />
+        </context>
+    </template>
+</templateSet>

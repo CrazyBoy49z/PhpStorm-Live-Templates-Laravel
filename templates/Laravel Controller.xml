@@ -1,0 +1,93 @@
+<templateSet group="Laravel Controller">
+    <template name="gg-aite" value="&lt;div class=&quot;hr-line-dashed&quot;&gt;&lt;/div&gt;&#10;                           &lt;div class=&quot;form-group row&quot;&gt;&#10;                                &lt;label class=&quot;col-sm-2 col-form-label&quot;&gt;$label$&lt;/label&gt;&#10;                                &lt;div class=&quot;col-sm-10&quot;&gt;&#10;                                    &lt;input type=&quot;text&quot; name=&quot;$name$&quot;&#10;                                           class=&quot;form-control @error('$name$') is-invalid @enderror&quot;&#10;                                           value=&quot;{{ old('$name$') ?? $$$row$-&gt;$name$ ?? '' }}&quot;&#10;                                    &gt;&#10;                                    @error('$name$')&#10;                                    &lt;li&gt;{{ $message }}&lt;/li&gt;&#10;                                    @enderror&#10;                                &lt;/div&gt;&#10;&#10;                            &lt;/div&gt;$END$" shortcut="TAB" description="giga admin input text edit" toReformat="true" toShortenFQNames="true">
+        <variable name="label" expression="clipboard()" defaultValue="" alwaysStopAt="false" />
+        <variable name="name" expression="" defaultValue="&quot;name&quot;" alwaysStopAt="true" />
+        <variable name="row" expression="" defaultValue="&quot;row&quot;" alwaysStopAt="true" />
+        <context>
+            <option name="HTML" value="true" />
+            <option name="Twig" value="true" />
+        </context>
+    </template>
+    <template name="gg-aice" value="&lt;div class=&quot;form-group row&quot;&gt;&#10;                                &lt;label class=&quot;col-sm-2 col-form-label&quot;&gt;$label$&lt;/label&gt;&#10;                                &lt;div class=&quot;col-sm-10&quot;&gt;&#10;                                    @set ('$parameter$', old('$name$') ?? $$$row$-&gt;$name$ ?? 0)&#10;                                    &lt;input type=&quot;checkbox&quot; name=&quot;$name$&quot;&#10;                                           class=&quot;form-control @error('$name$') is-invalid @enderror&quot;&#10;                                           {{ !empty($$$parameter$) ? 'checked' : '' }}&#10;                                           value=&quot;$value$&quot;&gt;&#10;                                    @error('$name$')&#10;                                    &lt;li&gt;{{ $message }}&lt;/li&gt;&#10;                                    @enderror&#10;                                &lt;/div&gt;&#10;                            &lt;/div&gt;&#10;                            $END$" description="giga admin input checkbox edit" toReformat="true" toShortenFQNames="true">
+        <variable name="label" expression="clipboard()" defaultValue="" alwaysStopAt="true" />
+        <variable name="name" expression="" defaultValue="&quot;name&quot;" alwaysStopAt="true" />
+        <variable name="parameter" expression="" defaultValue="&quot;value&quot;" alwaysStopAt="true" />
+        <variable name="row" expression="" defaultValue="&quot;row&quot;" alwaysStopAt="true" />
+        <variable name="value" expression="" defaultValue="&quot;1&quot;" alwaysStopAt="true" />
+        <context>
+            <option name="HTML" value="true" />
+        </context>
+    </template>
+    <template name="ll::ControllerIndex" value="/**&#10; * Display a listing of the resource.&#10; * @param  \App\Models\$class$  $$$item$&#10; *&#10; * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View&#10; */&#10;public function index($class$ $$$item$)&#10;{&#10;    $$$item$s = $$$item$$more$-&gt;paginate($paginate$);&#10;&#10;    return view('$view$.index', compact('$item$s'));&#10;}" description="Display a listing of the resource" toReformat="true" toShortenFQNames="true">
+        <variable name="class" expression="firstWord(spaceSeparated(fileNameWithoutExtension()))" defaultValue="" alwaysStopAt="true" />
+        <variable name="item" expression="firstWord(spaceSeparated(decapitalize(fileNameWithoutExtension())))" defaultValue="" alwaysStopAt="true" />
+        <variable name="more" expression="" defaultValue="" alwaysStopAt="true" />
+        <variable name="paginate" expression="" defaultValue="&quot;20&quot;" alwaysStopAt="true" />
+        <variable name="view" expression="firstWord(spaceSeparated(decapitalize(fileNameWithoutExtension())))" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="PHP" value="true" />
+        </context>
+    </template>
+    <template name="ll::ControllerShow" value="/**&#10; * Display the specified resource.&#10; *&#10; * @param  \App\Models\$class$  $$$item$&#10; *&#10; * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View&#10; */&#10;public function show($class$ $$$item$)&#10;{&#10;    return view('$view$.show', compact('$item$'));&#10;}" description="Display the specified resource" toReformat="true" toShortenFQNames="true">
+        <variable name="class" expression="firstWord(spaceSeparated(fileNameWithoutExtension()))" defaultValue="" alwaysStopAt="true" />
+        <variable name="item" expression="firstWord(spaceSeparated(decapitalize(fileNameWithoutExtension())))" defaultValue="" alwaysStopAt="true" />
+        <variable name="view" expression="firstWord(spaceSeparated(decapitalize(fileNameWithoutExtension())))" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="PHP" value="true" />
+        </context>
+    </template>
+    <template name="ll::ControllerCreate" value="/**&#10; * Show the form for creating a new resource.&#10; *&#10; * @param  \App\Models\$class$  $$$item$&#10; *&#10; * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View&#10; */&#10;public function create($class$ $$$item$)&#10;{&#10;    return view('$view$.create', compact('$item$'));&#10;}" description="Show the form for creating a new resource" toReformat="true" toShortenFQNames="true">
+        <variable name="class" expression="firstWord(spaceSeparated(fileNameWithoutExtension()))" defaultValue="" alwaysStopAt="true" />
+        <variable name="item" expression="firstWord(spaceSeparated(decapitalize(fileNameWithoutExtension())))" defaultValue="" alwaysStopAt="true" />
+        <variable name="view" expression="firstWord(spaceSeparated(decapitalize(fileNameWithoutExtension())))" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="PHP" value="true" />
+        </context>
+    </template>
+    <template name="ll::ControllerStore" value="/**&#10; * Store a newly created resource in storage.&#10; * @param  \App\Models\$class$  $$$item$&#10; *&#10; * @return \Illuminate\Http\RedirectResponse&#10;*/&#10;public function store($class$ $$$item$, $requestClass$ $r)&#10;{&#10;    $$$item$-&gt;create($r-&gt;$validated$());&#10;&#10;    return redirect()-&gt;action([self::class, 'index'])-&gt;with('success', trans('$item$.created'));&#10;}" description="Store a newly created resource in storage" toReformat="true" toShortenFQNames="true">
+        <variable name="class" expression="firstWord(spaceSeparated(fileNameWithoutExtension()))" defaultValue="" alwaysStopAt="true" />
+        <variable name="item" expression="firstWord(spaceSeparated(decapitalize(fileNameWithoutExtension())))" defaultValue="" alwaysStopAt="true" />
+        <variable name="requestClass" expression="" defaultValue="&quot;Request&quot;" alwaysStopAt="true" />
+        <variable name="validated" expression="enum(&quot;all&quot;,&quot;validated&quot;)" defaultValue="&quot;all&quot;" alwaysStopAt="true" />
+        <context>
+            <option name="PHP" value="true" />
+        </context>
+    </template>
+    <template name="ll::ControllerEdit" value="/**&#10;  * Show the form for editing the specified resource.&#10;  *&#10;  * @param  \App\Models\$class$  $$$item$&#10;  *&#10;  * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View&#10;  */&#10;public function edit($class$ $$$item$)&#10;{&#10;    return view('$view$.edit', compact('$item$'));&#10;}" description="Display the specified resource" toReformat="true" toShortenFQNames="true">
+        <variable name="class" expression="firstWord(spaceSeparated(fileNameWithoutExtension()))" defaultValue="" alwaysStopAt="true" />
+        <variable name="item" expression="firstWord(spaceSeparated(decapitalize(fileNameWithoutExtension())))" defaultValue="" alwaysStopAt="true" />
+        <variable name="view" expression="firstWord(spaceSeparated(decapitalize(fileNameWithoutExtension())))" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="PHP" value="true" />
+        </context>
+    </template>
+    <template name="ll::ControllerDestroy" value="/**&#10; * Remove the specified resource from storage.&#10; * @param  \App\Models\$class$  $$$item$&#10; *&#10; * @return \Illuminate\Http\JsonResponse&#10; * @throws \Exception&#10; */&#10;public function destroy($class$ $$$item$)&#10;{&#10;    $$$item$-&gt;delete();&#10;    return response()-&gt;json([&#10;        'success' =&gt; true,&#10;    ]);&#10;}" description="Remove the specified resource from storage" toReformat="true" toShortenFQNames="true">
+        <variable name="class" expression="firstWord(spaceSeparated(fileNameWithoutExtension()))" defaultValue="" alwaysStopAt="true" />
+        <variable name="item" expression="firstWord(spaceSeparated(decapitalize(fileNameWithoutExtension())))" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="PHP" value="true" />
+        </context>
+    </template>
+    <template name="ll::ControllerUpdate" value="/**&#10; * Update the specified resource in storage.&#10; * @param  \App\Models\$class$  $$$item$&#10; *&#10; * @return \Illuminate\Http\RedirectResponse&#10;*/&#10;public function update($class$ $$$item$, $requestClass$ $r)&#10;{&#10;    $$$item$-&gt;update($r-&gt;$validated$());&#10;&#10;    return redirect()-&gt;action([self::class, 'index'])-&gt;with('success', trans('$item$.update'));&#10;}" description="Store a newly created resource in storage" toReformat="true" toShortenFQNames="true">
+        <variable name="class" expression="firstWord(spaceSeparated(fileNameWithoutExtension()))" defaultValue="" alwaysStopAt="true" />
+        <variable name="item" expression="firstWord(spaceSeparated(decapitalize(fileNameWithoutExtension())))" defaultValue="" alwaysStopAt="true" />
+        <variable name="requestClass" expression="" defaultValue="&quot;Request&quot;" alwaysStopAt="true" />
+        <variable name="validated" expression="enum(&quot;all&quot;,&quot;validated&quot;)" defaultValue="&quot;all&quot;" alwaysStopAt="true" />
+        <context>
+            <option name="PHP" value="true" />
+        </context>
+    </template>
+    <template name="ll::Controller" value="namespace App\Http\Controllers$namespace$;&#10;&#10;use App\Models\$class$;&#10;use Illuminate\Http\Request;&#10;use Illuminate\Support\Facades\Log;&#10;use Illuminate\Support\Facades\DB;&#10;&#10;&#10;class $class$Controller extends Controller&#10;{ &#10;/**&#10; * Display a listing of the resource.&#10; * @param  \App\Models\$class$  $$$item$&#10; *&#10; * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View&#10; */&#10;public function index($class$ $$$item$)&#10;{&#10;    $$$item$s = $$$item$$more$-&gt;paginate($paginate$);&#10;&#10;    return view('$view$.index', compact('$item$s'));&#10;}&#10;&#10;/**&#10; * Display the specified resource.&#10; *&#10; * @param  \App\Models\$class$  $$$item$&#10; *&#10; * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View&#10; */&#10;public function show($class$ $$$item$)&#10;{&#10;    return view('$view$.show', compact('$item$'));&#10;}&#10;&#10;&#10;/**&#10; * Show the form for creating a new resource.&#10; *&#10; * @param  \App\Models\$class$  $$$item$&#10; *&#10; * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View&#10; */&#10;public function create($class$ $$$item$)&#10;{&#10;    return view('$view$.create', compact('$item$'));&#10;}&#10;&#10;/**&#10; * Store a newly created resource in storage.&#10; * @param  \App\Models\$class$  $$$item$&#10; *&#10; * @return \Illuminate\Http\RedirectResponse&#10;*/&#10;public function store($class$ $$$item$, $requestClass$ $r)&#10;{&#10;    $$$item$-&gt;create($r-&gt;$validated$());&#10;&#10;    return redirect()-&gt;action([self::class, 'index'])-&gt;with('success', trans('$item$.created'));&#10;}&#10;&#10;&#10;/**&#10;  * Show the form for editing the specified resource.&#10;  *&#10;  * @param  \App\Models\$class$  $$$item$&#10;  *&#10;  * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View&#10;  */&#10;public function edit($class$ $$$item$)&#10;{&#10;    return view('$view$.edit', compact('$item$'));&#10;}&#10;&#10;/**&#10; * Update the specified resource in storage.&#10; * @param  \App\Models\$class$  $$$item$&#10; *&#10; * @return \Illuminate\Http\RedirectResponse&#10;*/&#10;public function update($class$ $$$item$, $requestClass$ $r)&#10;{&#10;    $$$item$-&gt;update($r-&gt;$validated$());&#10;&#10;    return redirect()-&gt;action([self::class, 'index'])-&gt;with('success', trans('$item$.update'));&#10;}&#10;&#10;/**&#10; * Remove the specified resource from storage.&#10; * @param  \App\Models\$class$  $$$item$&#10; *&#10; * @return \Illuminate\Http\JsonResponse&#10; * @throws \Exception&#10; */&#10;public function destroy($class$ $$$item$)&#10;{&#10;    $$$item$-&gt;delete();&#10;    return response()-&gt;json([&#10;        'success' =&gt; true,&#10;    ]);&#10;}&#10;}" description="Add resource controller" toReformat="true" toShortenFQNames="true">
+        <variable name="namespace" expression="" defaultValue="" alwaysStopAt="true" />
+        <variable name="class" expression="firstWord(spaceSeparated(fileNameWithoutExtension()))" defaultValue="" alwaysStopAt="true" />
+        <variable name="item" expression="firstWord(spaceSeparated(decapitalize(fileNameWithoutExtension())))" defaultValue="" alwaysStopAt="true" />
+        <variable name="more" expression="" defaultValue="" alwaysStopAt="true" />
+        <variable name="paginate" expression="" defaultValue="&quot;20&quot;" alwaysStopAt="true" />
+        <variable name="view" expression="firstWord(spaceSeparated(decapitalize(fileNameWithoutExtension())))" defaultValue="" alwaysStopAt="true" />
+        <variable name="requestClass" expression="" defaultValue="&quot;Request&quot;" alwaysStopAt="true" />
+        <variable name="validated" expression="enum(&quot;validated&quot;, &quot;all&quot;)" defaultValue="&quot;all&quot;" alwaysStopAt="true" />
+        <context>
+            <option name="PHP" value="true" />
+        </context>
+    </template>
+</templateSet>
