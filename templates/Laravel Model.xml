@@ -1,0 +1,10 @@
+<templateSet group="Laravel Model">
+    <template name="belongsTo" value="public function $VAR_VALUE$()&#10;{&#10;    return $this-&gt;belongsTo($ITERABLE$::class$NEXT$);&#10;}$END$" description="laravel belongsTo" toReformat="false" toShortenFQNames="true">
+        <variable name="ITERABLE" expression="" defaultValue="" alwaysStopAt="true" />
+        <variable name="VAR_VALUE" expression="snakeCase(ITERABLE)" defaultValue="" alwaysStopAt="true" />
+        <variable name="NEXT" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="PHP Class Member" value="true" />
+        </context>
+    </template>
+</templateSet>

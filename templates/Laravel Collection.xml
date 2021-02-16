@@ -1,0 +1,118 @@
+<templateSet group="Laravel Collection">
+    <template name="count" value="count()$END$" description="laravel count" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="PHP" value="true" />
+            <option name="PHP Class Member" value="false" />
+            <option name="PHP Comment" value="false" />
+            <option name="PHP Expression" value="false" />
+            <option name="PHP Statement" value="false" />
+            <option name="PHP String Literal" value="false" />
+        </context>
+    </template>
+    <template name="all" value="all($START$);$END$" description="laravel all" toReformat="true" toShortenFQNames="true">
+        <variable name="START" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="PHP" value="true" />
+            <option name="PHP Comment" value="false" />
+            <option name="PHP Expression" value="false" />
+            <option name="PHP Statement" value="false" />
+            <option name="PHP String Literal" value="false" />
+        </context>
+    </template>
+    <template name="isEmpty" value="isEmpty()$END$" description="laravel isEmpty" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="PHP" value="true" />
+            <option name="PHP Class Member" value="false" />
+            <option name="PHP Comment" value="false" />
+            <option name="PHP Expression" value="false" />
+            <option name="PHP Statement" value="false" />
+            <option name="PHP String Literal" value="false" />
+        </context>
+    </template>
+    <template name="isNotEmpty" value="isNotEmpty()$END$" description="laravel isNotEmpty" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="PHP" value="true" />
+            <option name="PHP Class Member" value="false" />
+            <option name="PHP Comment" value="false" />
+            <option name="PHP Expression" value="false" />
+            <option name="PHP Statement" value="false" />
+            <option name="PHP String Literal" value="false" />
+        </context>
+    </template>
+    <template name="paginate" value="paginate($NEXT$)$END$" description="laravel paginate" toReformat="true" toShortenFQNames="true">
+        <variable name="NEXT" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="PHP" value="true" />
+        </context>
+    </template>
+    <template name="whereNull" value="whereNull($START$)$END$" description="laravel whereNull" toReformat="true" toShortenFQNames="true">
+        <variable name="START" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="PHP" value="true" />
+        </context>
+    </template>
+    <template name="collapse" value="collapse()$END$" description="laravel collapse" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="PHP" value="true" />
+            <option name="PHP Class Member" value="false" />
+            <option name="PHP Comment" value="false" />
+            <option name="PHP Expression" value="false" />
+            <option name="PHP Statement" value="false" />
+            <option name="PHP String Literal" value="false" />
+        </context>
+    </template>
+    <template name="take" value="take($NEXT$)$END$" description="laravel take" toReformat="true" toShortenFQNames="true">
+        <variable name="NEXT" expression="" defaultValue="&quot;20&quot;" alwaysStopAt="true" />
+        <context>
+            <option name="PHP" value="true" />
+            <option name="PHP Class Member" value="false" />
+            <option name="PHP Comment" value="false" />
+            <option name="PHP Expression" value="false" />
+            <option name="PHP Statement" value="false" />
+            <option name="PHP String Literal" value="false" />
+        </context>
+    </template>
+    <template name="toArray" value="toArray()$END$" description="laravel toArray" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="PHP" value="true" />
+        </context>
+    </template>
+    <template name="first" value="first($NEXT$);$END$" description="laravel first" toReformat="true" toShortenFQNames="true">
+        <variable name="NEXT" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="PHP" value="true" />
+            <option name="PHP Class Member" value="false" />
+            <option name="PHP Comment" value="false" />
+            <option name="PHP Expression" value="false" />
+            <option name="PHP Statement" value="false" />
+            <option name="PHP String Literal" value="false" />
+        </context>
+    </template>
+    <template name="get" value="get($NEXT$);$END$" description="laravel get" toReformat="true" toShortenFQNames="true">
+        <variable name="NEXT" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="PHP" value="true" />
+            <option name="PHP Comment" value="false" />
+            <option name="PHP Expression" value="false" />
+            <option name="PHP Statement" value="false" />
+            <option name="PHP String Literal" value="false" />
+        </context>
+    </template>
+    <template name="updateOrCreate" value="updateOrCreate($START$, $NEXT$);$END$" description="laravel updateOrCreate" toReformat="true" toShortenFQNames="true">
+        <variable name="START" expression="" defaultValue="&quot;[]&quot;" alwaysStopAt="true" />
+        <variable name="NEXT" expression="" defaultValue="&quot;[]&quot;" alwaysStopAt="true" />
+        <context>
+            <option name="PHP" value="true" />
+        </context>
+    </template>
+    <template name="contains" value="contains($START$)$END$" description="laravel contains" toReformat="true" toShortenFQNames="true">
+        <variable name="START" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="PHP" value="true" />
+            <option name="PHP Comment" value="false" />
+            <option name="PHP Expression" value="false" />
+            <option name="PHP Statement" value="false" />
+            <option name="PHP String Literal" value="false" />
+        </context>
+    </template>
+</templateSet>
