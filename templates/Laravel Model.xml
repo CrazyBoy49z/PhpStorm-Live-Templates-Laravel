@@ -7,4 +7,27 @@
             <option name="PHP Class Member" value="true" />
         </context>
     </template>
+    <template name="belongsToMany" value="public function $VAR_VALUE$()&#10;{&#10;    return $this-&gt;belongsToMany($ITERABLE$::class, $NEXT$);&#10;}$END$" description="laravel belongsToMany" toReformat="false" toShortenFQNames="true">
+        <variable name="ITERABLE" expression="" defaultValue="" alwaysStopAt="true" />
+        <variable name="VAR_VALUE" expression="snakeCase(ITERABLE)" defaultValue="" alwaysStopAt="true" />
+        <variable name="NEXT" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="PHP Class Member" value="true" />
+        </context>
+    </template>
+    <template name="geta" value="public function get$NAME$Attribute()&#10;{&#10;    return $NEXT$;&#10;}$END$" description="laravel getAttribute" toReformat="true" toShortenFQNames="true">
+        <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+        <variable name="NEXT" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="PHP Class Member" value="true" />
+        </context>
+    </template>
+    <template name="hasMany" value="public function $VAR_VALUE$()&#10;{&#10;    return $this-&gt;hasMany($ITERABLE$::class, $NEXT$);&#10;}$END$" description="laravel hasMany" toReformat="false" toShortenFQNames="true">
+        <variable name="ITERABLE" expression="" defaultValue="" alwaysStopAt="true" />
+        <variable name="VAR_VALUE" expression="snakeCase(ITERABLE)" defaultValue="" alwaysStopAt="true" />
+        <variable name="NEXT" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="PHP Class Member" value="true" />
+        </context>
+    </template>
 </templateSet>
